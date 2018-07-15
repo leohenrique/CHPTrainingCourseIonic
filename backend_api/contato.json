@@ -1,0 +1,9 @@
+{
+  "contatos" : [
+    {
+      "id":"1",
+      "nome": "Seu Nome",
+      "endereco": "Rua"
+    }
+  ]
+}
