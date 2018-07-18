@@ -11,6 +11,9 @@ import { ContatoService } from '../services/ContatoService';
 import { ContatoDetalhePage } from '../pages/contato-detalhe/contato-detalhe';
 import { Storage } from "@ionic/storage";
 import { ContatoDAO } from '../model/ContatoDAO';
+import { ApplicationService } from '../services/applicationService';
+import { HttpModule } from '@angular/http';
+import { ConnectivityProvider } from '../providers/connectivity';
 
 export function provideStorage(){
   return new Storage({
@@ -28,6 +31,7 @@ export function provideStorage(){
     ContatoDetalhePage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -39,12 +43,13 @@ export function provideStorage(){
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: Storage, useFactory: provideStorage},
     ContatoService,
     ContatoDAO,
-    
+    ApplicationService,
+    ConnectivityProvider
     
   ]
 })

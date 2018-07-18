@@ -1,9 +1,28 @@
 {
-  "contatos" : [
+  "contatos": [
     {
-      "id":"1",
+      "id": "1",
       "nome": "Seu Nome",
       "endereco": "Rua"
+    },
+    {
+      "id": "3",
+      "nome": "Outro Nome",
+      "endereco": "Rua 2"
+    },
+    {
+      "id": "5",
+      "nome": "Curso",
+      "endereco": "Rua 7 de setembro 2",
+      "foto": "remove"
+    },
+    {
+      "nome": "Yaa",
+      "endereco": "Raa",
+      "foto": "add",
+      "dataNascimento": "2018-07-18",
+      "sexo": "M",
+      "id": "51"
     }
   ]
 }

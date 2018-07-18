@@ -19,6 +19,10 @@ export class ContatoDAO {
     return this.storage.remove(pContato.id);
   }
 
+  deleteAll(){
+    return this.storage.clear();
+  }
+
   select(pContato?){
     if(pContato){
       return this.storage.get(pContato.id);

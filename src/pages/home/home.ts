@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ContatoService } from '../../services/ContatoService';
 import { ContatoDetalhePage } from '../contato-detalhe/contato-detalhe';
+import { ApplicationService } from '../../services/applicationService';
 
 @Component({
   selector: 'page-home',
@@ -10,14 +11,11 @@ import { ContatoDetalhePage } from '../contato-detalhe/contato-detalhe';
 export class HomePage {
 
   public listaContatos;
-  constructor(public navCtrl: NavController,
-              public contatoService: ContatoService) {
-    
-    this.contatoService.selectAll().then((value) => { 
-      console.log(value);
-      return this.listaContatos = value;
-    });
 
+  constructor(public navCtrl: NavController,
+              public contatoService: ContatoService
+              ) {
+                  
   }
 
   public selectContatos(){
