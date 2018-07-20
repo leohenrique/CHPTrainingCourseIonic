@@ -1,0 +1,20 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   config.xml
+#	modified:   db.json
+#	modified:   package-lock.json
+#	modified:   package.json
+#	modified:   src/app/app.module.ts
+#	modified:   src/model/ContatoDAO.ts
+#	modified:   src/pages/home/home.ts
+#	new file:   src/providers/locationProvider.ts
+#	modified:   src/services/ContatoService.ts
+#	modified:   src/services/applicationService.ts
+#
+
