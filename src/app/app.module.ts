@@ -15,6 +15,11 @@ import { ApplicationService } from '../services/applicationService';
 import { HttpModule } from '@angular/http';
 import { ConnectivityProvider } from '../providers/connectivity';
 
+import { BackgroundGeolocation } from 'ionic-native';
+import { LocationProvider } from '../providers/locationProvider';
+import { Geolocation } from '@ionic-native/geolocation';
+
+
 export function provideStorage(){
   return new Storage({
       driverOrder: ['websql'],
@@ -49,7 +54,11 @@ export function provideStorage(){
     ContatoService,
     ContatoDAO,
     ApplicationService,
-    ConnectivityProvider
+    ConnectivityProvider,
+    LocationProvider,
+    Geolocation,
+    BackgroundGeolocation
+
     
   ]
 })

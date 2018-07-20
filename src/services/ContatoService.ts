@@ -1,6 +1,6 @@
 import { Contato } from "../model/Contato"; 
 
-import { Injectable } from "../../node_modules/@angular/core";
+import { Injectable } from "@angular/core";
 import { ContatoDAO } from "../model/ContatoDAO";
 import { ApplicationService } from "./applicationService";
 

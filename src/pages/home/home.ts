@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ToastController } from 'ionic-angular';
+import { NavController, AlertController, ToastController, LoadingController, Loading } from 'ionic-angular';
 import { ContatoService } from '../../services/ContatoService';
 import { ContatoDetalhePage } from '../contato-detalhe/contato-detalhe';
 
@@ -10,12 +10,18 @@ import { ContatoDetalhePage } from '../contato-detalhe/contato-detalhe';
 export class HomePage {
 
   public listaContatos;
+  private _loading: Loading;
 
   constructor(public navCtrl: NavController,
               public contatoService: ContatoService,
               private _alertController: AlertController,
-              private _toastController: ToastController
+              private _toastController: ToastController,
+              private _loadingController: LoadingController
               ) {         
+    
+    this._loading = this._loadingController.create({
+      content: "Aguarde...",      
+    });
   }
 
   public selectContatos(){
@@ -58,8 +64,12 @@ export class HomePage {
   }
 
   ionViewDidEnter() {
+    this._loading.present();
+    
     this.contatoService.selectAll().then((value) => { 
       console.log(value);
+      
+      this._loading.dismiss();
       return this.listaContatos = value;
     });
   }

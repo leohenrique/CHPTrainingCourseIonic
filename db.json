@@ -1,11 +1,6 @@
 {
   "contatos": [
     {
-      "id": "1",
-      "nome": "Seu Nome",
-      "endereco": "Rua"
-    },
-    {
       "id": "3",
       "nome": "Outro Nome",
       "endereco": "Rua 2"
